@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+}
+
+.plan-container {
+    background-color: #201351;
+    background-image: url(../public/assets/wing-top_right.png), url(../public/assets/wing-top_left.png);
+    background-position: 100% 0, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+}
+
+.plan-aircraft-divider {
+    background-image: linear-gradient(270deg, #3386ff, #201351 0%, rgba(51, 134, 255, .29));
+}
+
+.about-team-container {
+    background-color: #1c1537;
+    background-image: url(../public/assets/about-team-radar.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.team-container {
+    grid-template-columns: .5fr 1fr;
+}
+
+.pilotsteps-banner {
+    grid-template-columns: 1.25fr 1fr;
+}
+
+.pilot-license-container {
+    background-image: url(/assets/artboard-pilot.png);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+}
+
+.preflight-planning {
+    background-color: #201351;
+    background-image: url(/assets/radar-cut-pilot.png);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+}
+
+.prefight-circle-container {
+    grid-template:
+        "."
+        "." / 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+}
+
+.introductoryflight-pilot-section {
+    background-image: url(/assets/introductoryflight-pilot-section.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.pilot-hero {
+    grid-template-rows: auto;
+    grid-template-columns: .75fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: center;
+}
+
+@media screen and (max-width: 990px) {
+    .plan-container {
+        background-image: none;
+    }
+
+
+    .preflight-planning {
+        background-image: none;
+    }
+
+    .pilot-license-container {
+        background-image: none;
+    }
+
+    .introductoryflight-pilot-section {
+        background-image: none;
+    }
+
+    .pilot-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-team-container {
+        background-image: none;
+    }
+
+    .pilotsteps-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .prefight-circle-container {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr;
+        grid-auto-flow: column;
+        align-items: start;
+    }
+
+    .hero-right-mobile{
+        background-image: url(/assets/her-cloud-background.png), linear-gradient(to right, #291a5f, #1a3196);
+        background-position: 30% 70%, 0 0;
+        background-repeat: no-repeat, repeat;
+        background-size: cover, auto;
+        padding-bottom: 30vh;
+    }
+
+
+
+}
